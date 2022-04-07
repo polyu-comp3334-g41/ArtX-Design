@@ -46,13 +46,41 @@
             <div class="alert alert-success invisible mt-5" role="alert"><span id="notify"></span></div>
             <h1>File Drop<br></h1>
             <p><label class="form-label" for="form-files"><a class="btn btn-secondary btn-sm" role="button">Choose Files</a></label>&nbsp;or drag the files to anywhere on this page.<br></p>
-            <p>Description:</p><input type="text">
-            <p id="filecount"><br></p>
-            <div id="list"></div>
-            <form method="post"><input class="form-control invisible" type="file" id="form-files" name="files" multiple=""><button class="btn btn-outline-primary d-block w-100" type="submit">Submit</button><button class="btn btn-danger mt-5" type="reset" onclick="clearFiles()">Reset</button></form>
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Information</th>
+                            <th>Please fill in the blanks...</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Maker Name</td>
+                            <td><input type="text"></td>
+                        </tr>
+                        <tr>
+                            <td>Artwork Name</td>
+                            <td><input type="text"></td>
+                        </tr>
+                        <tr>
+                            <td>Create Time</td>
+                            <td><input type="text"></td>
+                        </tr>
+                        <tr>
+                            <td>Description</td>
+                            <td><input type="text"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <form method="post"><input class="form-control invisible" type="file" id="form-files" name="files" multiple=""><button class="btn btn-outline-primary d-block w-100" type="submit" onclick="document.location=&#39;me.html&#39;">Submit</button><button class="btn btn-danger mt-5" type="reset" onclick="clearFiles()">Reset</button></form>
         </div>
-        <div class="text-center bg-light border rounded border-dark shadow-lg p-3"><img id="image_preview" width="100">
-            <div><button class="btn btn-warning btn-sm m-3" onclick="previewClose()">Close</button></div>
+        <div class="text-center bg-light border rounded border-dark shadow-lg p-3">
+            <div class="row">
+                <div class="col"><small class="form-text">The Artwork is shown below:</small></div>
+            </div>
+            <div><img id="image_preview" width="100"></div><button class="btn btn-warning btn-sm m-3" onclick="previewClose()">Close</button>
         </div>
     </div>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
